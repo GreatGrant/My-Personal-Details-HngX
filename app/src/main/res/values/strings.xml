@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">My Personal Details</string>
+    <string name="open_github">Open GitHub</string>
+    <string name="profile_picture_description">User Profile Picture</string>
+    <string name="grant_williams">Grant Williams</string>
+</resources>
