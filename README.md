@@ -13,7 +13,8 @@ My Personal Details is a simple Android app that displays my slack username, pro
 
 ## Demo
 
-You can try the app online using Appetize.io: [My Personal Details Demo]([https://appetize.io/app/cuofr3n7g34sruujhqcbspgmkm?device=pixel4&osVersion=11.0&scale=75](https://appetize.io/app/u4vmqrs5be75ocjcquzfvsibe4?device=pixel4&osVersion=11.0&scale=75))
+You can try the app online using [Appetize.io](https://appetize.io/app/u4vmqrs5be75ocjcquzfvsibe4?device=pixel4&osVersion=11.0&scale=75)
+
 
 ## Installation
 
