@@ -15,13 +15,14 @@ import com.gralliams.mypersonaldetails.databinding.ActivityWebViewBinding
 
 class WebViewActivity : AppCompatActivity() {
     private lateinit var binding: ActivityWebViewBinding
+    private lateinit var webView: WebView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_web_view)
 
-        val webView = binding.webview
-        webView.settings.apply{
+        webView = binding.webview
+        webView.settings.apply {
             javaScriptEnabled = true
             cacheMode = WebSettings.LOAD_CACHE_ELSE_NETWORK
         }
@@ -30,7 +31,7 @@ class WebViewActivity : AppCompatActivity() {
         // Set a WebViewClient to handle page loading within the WebView
         webView.webViewClient = MyWebViewClient()
 
-            webView.loadUrl(getString(R.string.my_git_link))
+        webView.loadUrl(getString(R.string.my_git_link))
 
     }
 
@@ -48,5 +49,11 @@ class WebViewActivity : AppCompatActivity() {
         }
     }
 
-
+    override fun onBackPressed() {
+        if (webView.canGoBack()) {
+            webView.goBack()
+        } else {
+            onBackPressedDispatcher.onBackPressed()
+        }
+    }
 }
