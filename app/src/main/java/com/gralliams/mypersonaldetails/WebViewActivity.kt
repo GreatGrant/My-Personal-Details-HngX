@@ -30,7 +30,6 @@ class WebViewActivity : AppCompatActivity() {
         // Set a WebViewClient to handle page loading within the WebView
         webView.webViewClient = MyWebViewClient()
 
-            // Load the URL when there's an internet connection
             webView.loadUrl(getString(R.string.my_git_link))
 
     }
