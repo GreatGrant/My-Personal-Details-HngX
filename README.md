@@ -1,7 +1,5 @@
 # My-Personal-Details-HngX
 
-![App Screenshot](<screenshot_image_url>)
-
 My Personal Details is a simple Android app that displays my slack username, profile picture, and load my GitHub profile in a WebView.
 
 ## Features
