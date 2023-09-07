@@ -3,4 +3,6 @@
     <string name="open_github">Open GitHub</string>
     <string name="profile_picture_description">User Profile Picture</string>
     <string name="grant_williams">Grant Williams</string>
+    <string name="my_git_link">https://github.com/GreatGrant</string>
+    <string name="error_message"><![CDATA["\n            <html>\n            <head>\n                <style>\n                    body {\n                        display: flex;\n                        justify-content: center;\n                        align-items: center;\n                        height: 100vh;\n                        text-align: center;\n                    }\n                </style>\n            </head>\n            <body>\n                <h1>Webpage not available. Check your network connection</h1>\n            </body>\n            </html>\n        "]]></string>
 </resources>
