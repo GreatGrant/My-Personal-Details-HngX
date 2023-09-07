@@ -6,6 +6,7 @@ import android.net.NetworkCapabilities
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.webkit.WebResourceRequest
+import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.databinding.DataBindingUtil
@@ -20,22 +21,18 @@ class WebViewActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_web_view)
 
         val webView = binding.webview
-        webView.settings.javaScriptEnabled = true
+        webView.settings.apply{
+            javaScriptEnabled = true
+            cacheMode = WebSettings.LOAD_CACHE_ELSE_NETWORK
+        }
+
 
         // Set a WebViewClient to handle page loading within the WebView
         webView.webViewClient = MyWebViewClient()
 
-        if (isConnectedToInternet(this)) {
             // Load the URL when there's an internet connection
             webView.loadUrl(getString(R.string.my_git_link))
-        } else {
-            // Display an error message when there's no internet connection
-            webView.loadData(
-       getString(R.string.error_message).trimIndent(),
-                "text/html",
-                "UTF-8"
-            )
-        }
+
     }
 
     private inner class MyWebViewClient : WebViewClient() {
@@ -52,16 +49,5 @@ class WebViewActivity : AppCompatActivity() {
         }
     }
 
-    private fun isConnectedToInternet(context: Context): Boolean {
-        val connectivityManager =
-            context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
-
-        val activeNetwork = connectivityManager.activeNetwork
-        val networkCapabilities = connectivityManager.getNetworkCapabilities(activeNetwork)
-
-        // Check if the device has a network connection and it's capable of internet access
-        return networkCapabilities != null &&
-                networkCapabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)
-    }
 
 }
