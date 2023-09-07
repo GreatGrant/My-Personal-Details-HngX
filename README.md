@@ -1,6 +1,6 @@
 # My-Personal-Details-HngX
 
-<img src="https://github.com/GreatGrant/My-Personal-Details-HngX/assets/62026220/a29bc40a-72b6-4fce-8d90-1828facf3fd2" alt="screenshot" width="200" height="350">
+<img src="https://github.com/GreatGrant/My-Personal-Details-HngX/assets/62026220/a29bc40a-72b6-4fce-8d90-1828facf3fd2" alt="screenshot" width="210" height="400">
 
 
 My Personal Details is a simple Android app that displays my slack username, profile picture, and load my GitHub profile in a WebView.
